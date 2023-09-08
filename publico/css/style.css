@@ -1,40 +1,52 @@
-.AdnC {
+.Inicio:after {
+	display: table;
+	clear: both;
+}
+
+.Menu{
+	background-color: #212529;
+	height: 50vh;
+	float: left;
+  width: 15%;
+}
+
+.Menu .BotonDeSecuencia{
+	padding-top: 2%;
+	padding-left: 2%;
+}
+
+.Datos {
+	float: left;
+	width: 85%;
+}
+
+.Datos .AutoGneracion{
 	position: absolute;
-	transform: rotate(90deg);
-	margin: 0%;
-	height: 82vw;
-	width: 30vw;
-	margin-top: 20vw;
-	margin-right: 2vw;
+	font-size: 330%;
+	top: 26%;
+	left: 50%;
+	transform: translate(-23%);
 }
 
-.table-striped {
-	margin-top: 1%;
+.Datos .Imagen img.ImagenADN {
+	height: 500px;
+	width: 100%;
 }
 
-.autogneracion {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	font-size: 2.8vw;
-	margin-top: -352px;
-	z-index: 4;
-	right: 26%;
+.Datos .TablaA{
+	height: 50vh;
+	float: left;
+  width: 100%;
 }
 
-.Frente {
-	z-index: 3;
-}
-
-.Fondo-Del-canvas {
-	z-index: 2;
-}
-
-.container-Adn {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+footer {
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
 
 .custom-tooltip {

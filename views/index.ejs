@@ -5,11 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="/css/style.css" />
-		<title>Bio-Nec</title>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-		/>
+		<title>Bio-Sin</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -18,120 +15,70 @@
 		/>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 	</head>
-	<body>
-		<header
-			class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow"
-		>
+	<body style="background-color: #212529;">
+		<header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
 			<div class="d-flex align-items-center">
 				<img class="imgH" src="/Logo.jpeg" height="45px" width="80px" />
-				<a
-					class="navbar-brand title col-md-3 col-lg-2 me-0 px-3"
-					href="/Inicio"
-					>Bio-Nec</a
-				>
-				<a
-					href="/Conocenos"
-					data-bs-toggle="tooltip"
-					data-bs-placement="bottom"
-					style="margin-left: 25%"
-					title=" "
+				<a class="navbar-brand title col-md-3 col-lg-2 me-0 px-3" href="/">Bio-Sin</a>
+				<a href="/Conocenos" data-bs-toggle="tooltip" data-bs-placement="bottom" style="margin-left: 25%" title=" "
 					>Conocenos</a
 				>
 			</div>
 		</header>
-		<div class="container-fluid">
-			<div class="row">
-				<nav id="sidebarMenu" class="col-lg-2 d-md-block bg-dark">
-					<div class="position-sticky pt-3">
-						<ul class="nav flex-column">
-							<li>
-								<input
-									type="button"
-									class="btn btn-outline-secondary"
-									id="Generacion-secuencias"
-									value="Nueva Secuencia"
-								/>
-								<table class="table table-dark table-striped">
-									<thead>
-										<tr>
-											<th scope="col">Secuencias</th>
-										</tr>
-									</thead>
-									<tbody id="sequences-list">
-										<% sequences.data.forEach(function(item)
-										{ %>
-										<tr>
-											<td><%= item.sequency %></td>
-										</tr>
-										<% }); %>
-									</tbody>
-								</table>
-							</li>
-						</ul>
+		<div class="Inicio">
+			<div class="Menu">
+				<ul class="nav flex-column">
+					<div class="BotonDeSecuencia">
+						<input type="button" class="btn btn-outline-secondary" id="Generacion-secuencias" value="Nueva Secuencia" />
 					</div>
-				</nav>
-
-				<main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-dark">
-					<div class="chartjs-size-monitor">
-						<div class="chartjs-size-monitor-expand">
-							<div class=""></div>
-						</div>
-						<div class="chartjs-size-monitor-shrink">
-							<div class=""></div>
-						</div>
-					</div>
-					<div
-						class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
-					>
-						<div class="btn-toolbar mb-2 mb-md-0"></div>
-					</div>
-					<div class="container-Adn">
-						<img
-							class="AdnC Frente"
-							src="/ImgCanvas.jpeg"
-							alt=""
-						/><i class=""></i>
-						<h2 class="autogeneracion">
-							<span id="letter-sequence"></span>
-						</h2>
-					</div>
-					<canvas
-						class="my-4 w-100 chartjs-render-monitor"
-						id="myChart"
-						width="1077"
-						height="454"
-						style="display: block; width: 1077px; height: 454px"
-					></canvas>
-					<h2
-						class="autogneracion animate__animated animate__shakeX"
-						id="Secuencias-de-notas"
-					></h2>
-					<div
-						class="table-responsive"
-						style="margin-top: -45px; margin-left: -35px"
-					>
+					<div class="TablaI">
 						<table class="table table-dark table-striped">
 							<thead>
 								<tr>
 									<th scope="col">Secuencias</th>
-									<th scope="col">Transcripción</th>
-									<th scope="col">Proteinas</th>
 								</tr>
 							</thead>
-							<tbody id="sequences-list-table">
+							<tbody id="sequences-list">
 								<% sequences.data.forEach(function(item) { %>
 								<tr>
 									<td><%= item.sequency %></td>
-									<td><%= item.ARN %></td>
-									<td><b><%= item.proteins %></b></td>
 								</tr>
 								<% }); %>
 							</tbody>
 						</table>
 					</div>
-				</main>
+				</ul>
+			</div>
+			<div class="Datos">
+				<div class="Imagen"><img class="ImagenADN" src="/ImgCanvas.jpeg" alt="asdasdasd" /><i></i></div>
+				<div class="Generacion">
+					<h2 class="AutoGneracion" id="Secuencias-de-notas"></h2>
+				</div>
+				<div class="TablaA">
+					<table class="table table-dark table-striped">
+						<thead>
+							<tr>
+								<th scope="col">Secuencias</th>
+								<th scope="col">Transcripción</th>
+								<th scope="col">Proteinas</th>
+							</tr>
+						</thead>
+						<tbody id="sequences-list-table">
+							<% sequences.data.forEach(function(item) { %>
+							<tr>
+								<td><%= item.sequency %></td>
+								<td><%= item.ARN %></td>
+								<td><b><%= item.proteins %></b></td>
+							</tr>
+							<% }); %>
+						</tbody>
+					</table>
+				</div>
 			</div>
 		</div>
+		<footer>
+			<p>© 2023 Mi Página Web</p>
+		</footer>
 		<script src="/script.js"></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
@@ -150,13 +97,9 @@
 			crossorigin="anonymous"
 		></script>
 		<script>
-			let tooltipTriggerList = [].slice.call(
-				document.querySelectorAll('[data-bs-toggle="tooltip"]')
-			);
+			let tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
 
-			let tooltipList = tooltipTriggerList.map(function (
-				tooltipTriggerEl
-			) {
+			let tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 				return new bootstrap.Tooltip(tooltipTriggerEl);
 			});
 		</script>
