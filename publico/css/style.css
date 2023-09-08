@@ -1,0 +1,43 @@
+.AdnC {
+	position: absolute;
+	transform: rotate(90deg);
+	margin: 0%;
+	height: 82vw;
+	width: 30vw;
+	margin-top: 20vw;
+	margin-right: 2vw;
+}
+
+.table-striped {
+	margin-top: 1%;
+}
+
+.autogneracion {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	font-size: 2.8vw;
+	margin-top: -352px;
+	z-index: 4;
+	right: 26%;
+}
+
+.Frente {
+	z-index: 3;
+}
+
+.Fondo-Del-canvas {
+	z-index: 2;
+}
+
+.container-Adn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.custom-tooltip {
+	--bs-tooltip-bg: var(--bd-violet-bg);
+	--bs-tooltip-color: var(--bs-white);
+}
