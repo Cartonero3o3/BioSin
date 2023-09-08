@@ -11,7 +11,7 @@ router.get("/data", async (req, res) => {
 	const sequences = await getAllSequences();
 	res.send(sequences);
 });
-//cambiamos las rutas
+
 router.get("/Conocenos", async (req, res) => {
 	res.render("Conocenos.ejs");
 });
