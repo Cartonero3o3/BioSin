@@ -43,7 +43,7 @@ async function updatePage() {
 	const response = await fetch("/data", {
 		method: "GET",
 		headers: {
-			Accept: "application/json",
+			"Accept": "application/json",
 			"Content-Type": "application/json",
 		},
 	}).then((response) => response.json());

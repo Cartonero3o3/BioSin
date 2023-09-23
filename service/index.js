@@ -224,7 +224,29 @@ async function getAllSequences() {
 		const sequences = await collections
 			.find({})
 			.sort({ _id: -1 })
-			.limit(15)
+			.toArray();
+		return {
+			data: sequences.map((item) => ({
+				sequency: item.sequency,
+				ARN: transformSequenceToArn(item.sequency),
+				proteins: getProteinsFromRNA(transformSequenceToArn(item.sequency)),
+				sequencyI: transformSequence(item.sequency),
+			})),
+		};
+	} catch (error) {
+		console.log(error);
+		return [];
+	}
+}
+
+async function getAllSequences2() {
+	try {
+		const AdnDB = mongoose.connection.db;
+		const collections = await AdnDB.collection("sequency");
+		const sequences = await collections
+			.find({})
+			.sort({ _id: -1 })
+            .limit(1)
 			.toArray();
 		return {
 			data: sequences.map((item) => ({
@@ -243,4 +265,5 @@ async function getAllSequences() {
 module.exports = {
 	saveSequency,
 	getAllSequences,
+    getAllSequences2
 };

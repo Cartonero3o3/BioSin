@@ -1,10 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const { saveSequency, getAllSequences } = require("../service/index");
+const { saveSequency, getAllSequences, getAllSequences2 } = require("../service/index");
 
 router.get("/", async (req, res) => {
 	const sequences = await getAllSequences();
-	console.log(sequences)
 	res.render("index.ejs", { sequences });
 });
 
@@ -18,7 +17,7 @@ router.get("/Conocenos", async (req, res) => {
 });
 
 router.get("/proteinas", async (req, res) => {
-	const sequences = await getAllSequences();
+	const sequences = await getAllSequences2();
 	res.render("proteinas.ejs", { sequences });
 });
 

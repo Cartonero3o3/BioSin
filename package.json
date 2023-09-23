@@ -8,15 +8,16 @@
 		"express": "^4.18.2",
 		"mongodb": "^5.7.0",
 		"mongoose": "^7.4.3",
+		"nodemon": "^3.0.1",
 		"nvm": "0.0.4",
 		"vercel": "^31.3.1"
 	},
 	"scripts": {
-		"start": "node app.js"
+		"start": "nodemon app.js"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Cartonero3o3/BioSin.git"
+		"url": "https://github.com/Cartonero3o3/BioSin.git/"
 	},
 	"homepage": "https://github.com/Cartonero3o3/BioSin#readme",
 	"author": "",
