@@ -3,26 +3,25 @@
 	"version": "1.0.0",
 	"main": "app.js",
 	"dependencies": {
-	  "body-parser": "^1.20.2",
-	  "ejs": "^3.1.9",
-	  "express": "^4.18.2",
-	  "mongodb": "^5.7.0",
-	  "mongoose": "^7.4.3",
-	  "nodemon": "^3.0.1",
-	  "nvm": "0.0.4",
-	  "vercel": "^31.3.1"
+		"body-parser": "^1.20.2",
+		"ejs": "^3.1.9",
+		"express": "^4.18.2",
+		"mongodb": "^5.7.0",
+		"mongoose": "^7.4.3",
+		"nodemon": "^3.0.1",
+		"nvm": "0.0.4",
+		"vercel": "^31.3.1"
 	},
 	"scripts": {
-	  "start": "nodemon app.js"
+		"start": "nodemon app.js"
 	},
 	"repository": {
-	  "type": "git",
-	  "url": "https://github.com/Cartonero3o3/BioSin.git"
+		"type": "git",
+		"url": "https://github.com/Cartonero3o3/BioSin.git"
 	},
 	"homepage": "https://github.com/Cartonero3o3/BioSin",
 	"author": "",
 	"license": "ISC",
 	"keywords": [],
 	"description": ""
-  }
-  
+}
