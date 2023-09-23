@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'publico')));
 
 // Conexión a la base de datos
 dbConnection.connect();
-
+  
 // Middleware para manejar la Directory Listing
 app.use((req, res, next) => {
   const dirPath = path.join(__dirname, 'publico', req.path);
