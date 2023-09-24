@@ -13,6 +13,7 @@
 		"vercel": "^31.4.0"
 	},
 	"scripts": {
+		"build": "vercel",
 		"start": "nodemon app.js"
 	},
 	"repository": {
