@@ -26,6 +26,8 @@ body {
     margin-left: 15%;
 }
 
+
+
 .card {
     width: 400px;
     text-align: center;
@@ -43,12 +45,14 @@ body {
     object-fit: cover;
 }
 
-.co
-
 .card .card-text {
     color: black;
 }
 
+.tooltip-inner {
+    max-width: 200px; 
+    white-space: normal; 
+    }
 
 footer {
     background-color: #333;
