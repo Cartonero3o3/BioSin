@@ -11,6 +11,9 @@ app.use(bodyParser.json());
 
 app.use(express.static(path.join(__dirname, 'publico')));
 
+app.get('/inicio', (req, res) => {
+  res.sendFile(path.join(__dirname, 'publico', 'inicio.html'));
+});
 
 const routes = require('./routes');
 app.use('/', routes);
