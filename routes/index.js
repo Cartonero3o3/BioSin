@@ -4,7 +4,7 @@ const { saveSequency, getAllSequences, getAllSequences2 } = require("../service/
 
 router.get("/", async (req, res) => {
 	const sequences = await getAllSequences();
-	res.render("index.ejs", { sequences });
+	res.render("index", { sequences });
 });
 
 router.get("/data", async (req, res) => {
@@ -13,12 +13,12 @@ router.get("/data", async (req, res) => {
 });
 
 router.get("/Conocenos", async (req, res) => {
-	res.render("Conocenos.ejs");
+	res.render("Conocenos");
 });
 
 router.get("/proteinas", async (req, res) => {
 	const sequences = await getAllSequences2();
-	res.render("proteinas.ejs", { sequences });
+	res.render("proteinas", { sequences });
 });
 
 router.post("/", async (req, res) => {
