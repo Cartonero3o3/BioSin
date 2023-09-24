@@ -224,6 +224,7 @@ async function getAllSequences() {
 		const sequences = await collections
 			.find({})
 			.sort({ _id: -1 })
+			.limit(10)
 			.toArray();
 		return {
 			data: sequences.map((item) => ({
@@ -265,5 +266,5 @@ async function getAllSequences2() {
 module.exports = {
 	saveSequency,
 	getAllSequences,
-    getAllSequences2
+	getAllSequences2
 };
