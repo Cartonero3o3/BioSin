@@ -1,8 +1,8 @@
 {
-    "version": 2,
+    "version": 32.3,
     "builds": [
         {
-            "src": "./inicio.html",
+            "src": "./app.js",
             "use": "@vercel/node"
         }
     ],
