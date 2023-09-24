@@ -220,6 +220,8 @@ function getProteinsFromRNA(Arn) {
 async function getAllSequences() {
 	try {
 		const AdnDB = mongoose.connection.db;
+		if (!AdnDB) return [];
+		
 		const collections = await AdnDB.collection("sequency");
 		const sequences = await collections
 			.find({})
@@ -243,6 +245,8 @@ async function getAllSequences() {
 async function getAllSequences2() {
 	try {
 		const AdnDB = mongoose.connection.db;
+		if (!AdnDB) return [];
+		
 		const collections = await AdnDB.collection("sequency");
 		const sequences = await collections
 			.find({})
