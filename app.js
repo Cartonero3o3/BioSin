@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'publico')));
 
 app.get('/inicio', (req, res) => {
-  res.sendFile(path.join(__dirname, 'publico', 'inicio.html'));
+  res.sendFile('inicio.html', { root: path.join(__dirname, './publico') });
 });
 
 const routes = require('./routes');
